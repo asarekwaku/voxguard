@@ -1,0 +1,313 @@
+{
+  "date": "2026-11-08",
+  "description": "Preliminary class-balanced ASVspoof 2019 LA subset experiments",
+  "pilot": {
+    "seed": 475,
+    "train_recordings": 1200,
+    "dev_recordings": 400,
+    "eval_recordings": 400,
+    "clean_evaluation": {
+      "majority": {
+        "n": 400,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "synthetic_precision": 0.0,
+        "synthetic_recall": 0.0,
+        "synthetic_f1": 0.0,
+        "macro_f1": 0.3333333333333333,
+        "roc_auc": 0.5,
+        "eer": 0.5,
+        "genuine_false_alarm_rate": 0.0,
+        "synthetic_miss_rate": 1.0,
+        "confusion_matrix": [
+          [
+            200,
+            0
+          ],
+          [
+            200,
+            0
+          ]
+        ],
+        "confusion_matrix_order": [
+          "bonafide",
+          "spoof"
+        ]
+      },
+      "logistic_regression": {
+        "n": 400,
+        "accuracy": 0.845,
+        "balanced_accuracy": 0.845,
+        "synthetic_precision": 0.8791208791208791,
+        "synthetic_recall": 0.8,
+        "synthetic_f1": 0.837696335078534,
+        "macro_f1": 0.8446854881134297,
+        "roc_auc": 0.8908499999999999,
+        "eer": 0.18500000000000005,
+        "genuine_false_alarm_rate": 0.11,
+        "synthetic_miss_rate": 0.2,
+        "confusion_matrix": [
+          [
+            178,
+            22
+          ],
+          [
+            40,
+            160
+          ]
+        ],
+        "confusion_matrix_order": [
+          "bonafide",
+          "spoof"
+        ]
+      },
+      "svm_rbf": {
+        "n": 400,
+        "accuracy": 0.87,
+        "balanced_accuracy": 0.87,
+        "synthetic_precision": 0.8894736842105263,
+        "synthetic_recall": 0.845,
+        "synthetic_f1": 0.8666666666666667,
+        "macro_f1": 0.8699186991869918,
+        "roc_auc": 0.9303,
+        "eer": 0.145,
+        "genuine_false_alarm_rate": 0.105,
+        "synthetic_miss_rate": 0.155,
+        "confusion_matrix": [
+          [
+            179,
+            21
+          ],
+          [
+            31,
+            169
+          ]
+        ],
+        "confusion_matrix_order": [
+          "bonafide",
+          "spoof"
+        ]
+      },
+      "random_forest": {
+        "n": 400,
+        "accuracy": 0.8325,
+        "balanced_accuracy": 0.8325,
+        "synthetic_precision": 0.8633879781420765,
+        "synthetic_recall": 0.79,
+        "synthetic_f1": 0.825065274151436,
+        "macro_f1": 0.8321969056608499,
+        "roc_auc": 0.8963625,
+        "eer": 0.18500000000000005,
+        "genuine_false_alarm_rate": 0.125,
+        "synthetic_miss_rate": 0.21,
+        "confusion_matrix": [
+          [
+            175,
+            25
+          ],
+          [
+            42,
+            158
+          ]
+        ],
+        "confusion_matrix_order": [
+          "bonafide",
+          "spoof"
+        ]
+      }
+    }
+  },
+  "fresh_comparison": {
+    "evaluation_seed": 1475,
+    "eval_recordings": 1000,
+    "excludes_pilot_evaluation": true,
+    "models": {
+      "original_mfcc_svm": {
+        "clean": {
+          "n": 1000,
+          "accuracy": 0.864,
+          "balanced_accuracy": 0.864,
+          "synthetic_precision": 0.8839662447257384,
+          "synthetic_recall": 0.838,
+          "synthetic_f1": 0.8603696098562629,
+          "macro_f1": 0.8639080018092231,
+          "roc_auc": 0.9258399999999999,
+          "eer": 0.14,
+          "genuine_false_alarm_rate": 0.11,
+          "synthetic_miss_rate": 0.162,
+          "confusion_matrix": [
+            [
+              445,
+              55
+            ],
+            [
+              81,
+              419
+            ]
+          ],
+          "confusion_matrix_order": [
+            "bonafide",
+            "spoof"
+          ]
+        },
+        "noise_20_db": {
+          "n": 1000,
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "synthetic_precision": 0.5,
+          "synthetic_recall": 1.0,
+          "synthetic_f1": 0.6666666666666666,
+          "macro_f1": 0.3333333333333333,
+          "roc_auc": 0.493776,
+          "eer": 0.516,
+          "genuine_false_alarm_rate": 1.0,
+          "synthetic_miss_rate": 0.0,
+          "confusion_matrix": [
+            [
+              0,
+              500
+            ],
+            [
+              0,
+              500
+            ]
+          ],
+          "confusion_matrix_order": [
+            "bonafide",
+            "spoof"
+          ]
+        },
+        "noise_10_db": {
+          "n": 1000,
+          "accuracy": 0.5,
+          "balanced_accuracy": 0.5,
+          "synthetic_precision": 0.5,
+          "synthetic_recall": 1.0,
+          "synthetic_f1": 0.6666666666666666,
+          "macro_f1": 0.3333333333333333,
+          "roc_auc": 0.58532,
+          "eer": 0.43400000000000005,
+          "genuine_false_alarm_rate": 1.0,
+          "synthetic_miss_rate": 0.0,
+          "confusion_matrix": [
+            [
+              0,
+              500
+            ],
+            [
+              0,
+              500
+            ]
+          ],
+          "confusion_matrix_order": [
+            "bonafide",
+            "spoof"
+          ]
+        }
+      },
+      "augmented_acoustic": {
+        "clean": {
+          "n": 1000,
+          "accuracy": 0.894,
+          "balanced_accuracy": 0.8939999999999999,
+          "synthetic_precision": 0.9320175438596491,
+          "synthetic_recall": 0.85,
+          "synthetic_f1": 0.8891213389121339,
+          "macro_f1": 0.8937943859311628,
+          "roc_auc": 0.9552080000000001,
+          "eer": 0.108,
+          "genuine_false_alarm_rate": 0.062,
+          "synthetic_miss_rate": 0.15,
+          "confusion_matrix": [
+            [
+              469,
+              31
+            ],
+            [
+              75,
+              425
+            ]
+          ],
+          "confusion_matrix_order": [
+            "bonafide",
+            "spoof"
+          ]
+        },
+        "noise_20_db": {
+          "n": 1000,
+          "accuracy": 0.838,
+          "balanced_accuracy": 0.838,
+          "synthetic_precision": 0.8421052631578947,
+          "synthetic_recall": 0.832,
+          "synthetic_f1": 0.8370221327967807,
+          "macro_f1": 0.8379941677900404,
+          "roc_auc": 0.9137919999999999,
+          "eer": 0.16000000000000003,
+          "genuine_false_alarm_rate": 0.156,
+          "synthetic_miss_rate": 0.168,
+          "confusion_matrix": [
+            [
+              422,
+              78
+            ],
+            [
+              84,
+              416
+            ]
+          ],
+          "confusion_matrix_order": [
+            "bonafide",
+            "spoof"
+          ]
+        },
+        "noise_10_db": {
+          "n": 1000,
+          "accuracy": 0.767,
+          "balanced_accuracy": 0.767,
+          "synthetic_precision": 0.8201438848920863,
+          "synthetic_recall": 0.684,
+          "synthetic_f1": 0.7459105779716467,
+          "macro_f1": 0.7653837285056756,
+          "roc_auc": 0.8372919999999999,
+          "eer": 0.236,
+          "genuine_false_alarm_rate": 0.15,
+          "synthetic_miss_rate": 0.316,
+          "confusion_matrix": [
+            [
+              425,
+              75
+            ],
+            [
+              158,
+              342
+            ]
+          ],
+          "confusion_matrix_order": [
+            "bonafide",
+            "spoof"
+          ]
+        }
+      }
+    }
+  },
+  "improved_model": {
+    "representation": "combined",
+    "classifier": "svm_C1.0",
+    "threshold": -0.029748856495285136,
+    "training_recordings": 1200,
+    "training_views": 3600,
+    "augmentation": {
+      "views_per_recording": 2,
+      "noise": "Gaussian white",
+      "snr_db_uniform": [
+        8,
+        35
+      ]
+    },
+    "selection": "mean balanced accuracy across clean, 20 dB and 10 dB development conditions"
+  },
+  "cnn": {
+    "status": "Implementation and small CPU training/resume checks passed; substantive GPU experiment pending"
+  },
+  "detailed_artifacts": "https://github.com/asarekwaku/voxguard/tree/c181261e298390a767e71c56cd09669d43d50b86/runs"
+}

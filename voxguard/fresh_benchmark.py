@@ -101,7 +101,7 @@ def benchmark(args):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
-    parser.add_argument("--exclude-manifest", type=Path, default=Path("runs/pilot/subset_manifest.csv"))
+    parser.add_argument("--exclude-manifest", type=Path, default=Path("protocols/inspected_evaluation.csv"))
     parser.add_argument("--baseline", type=Path)
     parser.add_argument("--robust", type=Path)
     parser.add_argument("--cnn", type=Path)

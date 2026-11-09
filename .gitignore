@@ -10,3 +10,10 @@ feature_cache/
 last.pt
 data_*/
 .DS_Store
+runs/
+models/
+exports/
+*.joblib
+*.pt
+*.npy
+*.zip
